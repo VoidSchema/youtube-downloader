@@ -1,0 +1,32 @@
+# Virtual environment
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Output directories
+downloads/
+videos/
+audio/
+*.mp4
+*.mp3
+*.webm
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
