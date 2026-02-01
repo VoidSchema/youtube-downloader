@@ -5,9 +5,10 @@ A powerful and feature-rich Python CLI tool for downloading YouTube videos and p
 ## 🚀 Quick Setup
 
 ### One-Command Setup
+
 ```bash
 # Clone or download the project
-git clone <repository-url>
+git clone https://github.com/VoidSchema/youtube-downloader.git
 cd youtube-downloader
 
 # Run the automatic setup
@@ -21,6 +22,7 @@ python main.py "https://youtube.com/watch?v=xxxx"
 ```
 
 ### Manual Setup
+
 ```bash
 # Create virtual environment
 python3 -m venv .venv
@@ -49,57 +51,65 @@ pip install -r requirements.txt
 ## 📖 Usage Examples
 
 ### Basic Video Download
+
 ```bash
 python main.py "https://youtube.com/watch?v=VIDEO_ID"
 ```
 
 ### Download Audio Only (MP3)
+
 ```bash
 python main.py "URL" --audio-only
 ```
 
 ### Download Specific Quality
+
 ```bash
 python main.py "URL" --quality 720
 # Available: 144, 240, 360, 480, 720, 1080
 ```
 
 ### List Available Qualities
+
 ```bash
 python main.py "URL" --list-quality
 ```
 
 ### Download Entire Playlist
+
 ```bash
 python main.py "PLAYLIST_URL" --playlist
 ```
 
 ### Download Playlist as Audio
+
 ```bash
 python main.py "PLAYLIST_URL" --playlist --audio-only
 ```
 
 ### Custom Output Directory
+
 ```bash
 python main.py "URL" --output ~/Downloads/youtube
 ```
 
 ### Verbose Output
+
 ```bash
 python main.py "URL" --verbose
 ```
 
 ## 🛠️ Command Line Options
 
-| Option | Description | Example |
-|--------|-------------|---------|
-| `url` | YouTube video or playlist URL (required) | `"https://youtube.com/watch?v=xxxx"` |
-| `--audio-only` | Download audio only (MP3) | `--audio-only` |
-| `--quality` | Video resolution | `--quality 720` |
-| `--list-quality` | List available qualities | `--list-quality` |
-| `--playlist` | Download entire playlist | `--playlist` |
-| `--output` | Custom output directory | `--output ./downloads` |
-| `--verbose, -v` | Verbose output | `--verbose` |
+| Option           | Description                              | Example                              |
+| ---------------- | ---------------------------------------- | ------------------------------------ |
+| `url`            | YouTube video or playlist URL (required) | `"https://youtube.com/watch?v=xxxx"` |
+| `--audio-only`   | Download audio only (MP3)                | `--audio-only`                       |
+| `--quality`      | Video resolution                         | `--quality 720`                      |
+| `--list-quality` | List available qualities                 | `--list-quality`                     |
+| `--playlist`     | Download entire playlist                 | `--playlist`                         |
+| `--output`       | Custom output directory                  | `--output ./downloads`               |
+| `--verbose, -v`  | Verbose output                           | `--verbose`                          |
 
 ## 📁 Project Structure
 
@@ -128,17 +138,20 @@ youtube-downloader/
 ## 🎯 Supported URLs
 
 ### Video URLs
+
 - `https://www.youtube.com/watch?v=VIDEO_ID`
 - `https://youtu.be/VIDEO_ID`
 - `https://m.youtube.com/watch?v=VIDEO_ID`
 
 ### Playlist URLs
+
 - `https://www.youtube.com/playlist?list=PLAYLIST_ID`
 - `https://youtube.com/playlist?list=PLAYLIST_ID`
 
 ## 📊 Output Examples
 
 ### Video Download Output
+
 ```
 ✅ YouTube Downloader initialized successfully
 ℹ️  Starting video download...
@@ -153,6 +166,7 @@ Quality: 720p | Size: 25.3 MB
 ```
 
 ### Playlist Download Output
+
 ```
 ℹ️  Processing playlist: https://youtube.com/playlist?list=xxxx
 📼 Playlist: Amazing Playlist Title
@@ -166,14 +180,14 @@ Downloading playlist: 100%|████████| 15/15 [02:45<00:00, 11.2s/v
 
 ## 🔍 Quality Options
 
-| Resolution | Description | File Size (Typical) |
-|------------|-------------|-------------------|
-| 144p | Lowest quality, minimal storage | 5-15 MB |
-| 240p | Low quality, good for slow connections | 10-25 MB |
-| 360p | Standard quality | 20-50 MB |
-| 480p | Enhanced quality | 30-80 MB |
-| 720p | HD quality | 50-150 MB |
-| 1080p | Full HD | 100-300 MB |
+| Resolution | Description                            | File Size (Typical) |
+| ---------- | -------------------------------------- | ------------------- |
+| 144p       | Lowest quality, minimal storage        | 5-15 MB             |
+| 240p       | Low quality, good for slow connections | 10-25 MB            |
+| 360p       | Standard quality                       | 20-50 MB            |
+| 480p       | Enhanced quality                       | 30-80 MB            |
+| 720p       | HD quality                             | 50-150 MB           |
+| 1080p      | Full HD                                | 100-300 MB          |
 
 ## ⚠️ Important Notes
 
@@ -188,12 +202,14 @@ Downloading playlist: 100%|████████| 15/15 [02:45<00:00, 11.2s/v
 ### Common Issues
 
 #### Import Errors
+
 ```bash
 # Solution: Install dependencies properly
 pip install -r requirements.txt
 ```
 
 #### Audio Conversion Failed
+
 ```bash
 # Solution: Install FFmpeg
 # Ubuntu/Debian:
@@ -206,18 +222,22 @@ brew install ffmpeg
 ```
 
 #### Network Errors
+
 - Check your internet connection
 - Try again after a few minutes
 - Use VPN if YouTube is restricted in your region
 
 #### Permission Errors
+
 ```bash
 # Solution: Check file permissions
 chmod +x setup.sh activate.sh
 ```
 
 ### Debug Mode
+
 Use `--verbose` flag for detailed error messages:
+
 ```bash
 python main.py "URL" --verbose
 ```
@@ -237,6 +257,7 @@ This project is for educational purposes. Please respect YouTube's Terms of Serv
 ## 🙋‍♂️ Support
 
 If you encounter any issues:
+
 1. Check the troubleshooting section
 2. Try with `--verbose` flag for more details
 3. Create an issue with detailed information
